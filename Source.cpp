@@ -6,9 +6,7 @@ void DisplayVector(std::vector<int> v);
 
 int main()
 {
-	std::cout << "Hello world!" << std::endl;
-
-	std::vector<int> a{ 7,5,4,9,2,12,2 };
+	std::vector<int> a{ 7,5,4,9,2,12,1 };
 
 	DisplayVector(a);
 	a = SelectionSort(a);
