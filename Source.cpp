@@ -26,16 +26,20 @@ std::vector<int> SelectionSort(std::vector<int> v)
 	{
 		min = currentIndexCheck;
 
+		//we go through the list starting with the index after the one that has been swapped just before
 		for (int i = currentIndexCheck; i < v.size(); i++)
 		{
+			//we use the min to store de index of the smallest int we have found
 			if (v[i] < v[min]) 
 				min = i;
 		}
 
+		//we swap the two values
 		temp = v[min];
 		v[min] = v[currentIndexCheck];
 		v[currentIndexCheck] = temp;
 
+		//we increment the currentIndexCheck and if it is equal or greater than the last index of the list we return the list
 		if (currentIndexCheck++ >= v.size()-1) return v;
 	}
 }
